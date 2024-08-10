@@ -1,11 +1,7 @@
 package com.mnadiger.collections;
 
 import java.io.Serializable;
-import java.util.RandomAccess;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 
 //ArrayList:
@@ -34,6 +30,14 @@ import java.util.List;
 //- Present in java.util package
 
 
+// How to get Synchronized version of ArrayList object
+//Ans: By default ArrayList object are non-synchronized but we can get
+// synchronized version of ArrayList by using "Collection Class synchronizedList() method".
+
+//Similarly, we can get Synchronized version of Set, Map Object by using the following methods of Collections class.
+//public static Set synchronizedSet(Set s)
+//public static Map synchronizedSet(Map m)
+
 public class ArrayListDsemo {
 
     public static void main(String[] args) {
@@ -55,6 +59,27 @@ public class ArrayListDsemo {
         System.out.println("ArrayList elements: " + al);
 
 
+//**************************************************************************************************
+        // How to get Synchronized version of ArrayList object
+        //Ans: By default ArrayList object are non-synchronized but we can get synchronized version of ArrayList by using "Collection Class synchronizedList() method".
+
+        //Non-Synchronized
+        ArrayList al2 = new ArrayList();
+        al2.add(10);
+        al2.add(20);
+        al2.add(30);
+        al2.add(40);
+        al2.add(50);
+        System.out.println("Non-Synchronized ArrayList: " + al2);
+
+        //Synchronized
+        List l= Collections.synchronizedList(al2);
+        System.out.println("Synchronized ArrayList: " + l);
+
+//**************************************************************************************************
+
+
+        //Checking if ArrayList and LinkedList is Serializable, Cloneable, RandomAccess.....
         ArrayList a1 = new ArrayList();
         System.out.println("ArrayList is instance of serializable");
         System.out.println(a1 instanceof Serializable); // True
