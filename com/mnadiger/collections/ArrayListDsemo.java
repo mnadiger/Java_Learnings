@@ -13,7 +13,7 @@ import java.util.*;
 //    - Null insertion is possible
 //
 //    It creates an empty Array List Object with default initial capacity 10.
-//    Once Array List reaches its map capacity a new Array List will be created with "new capacity = (currentCapacity * 3/2) + 1"
+//    Once Array List reaches its max capacity a new Array List will be created with "new capacity = (currentCapacity * 3/2) + 1"
 
 //
 //Array List and Vector classes implements RandomAccess interfaces so that we can access any Random element with the same speed
